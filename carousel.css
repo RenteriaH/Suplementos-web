@@ -1,0 +1,71 @@
+.clients {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.clients .titlepage h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.clients .titlepage p {
+    font-size: 18px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.clients_box {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.clients_box figure img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+}
+
+.clients_box h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.clients_box p {
+    font-size: 16px;
+    color: #555;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 15px;
+    height: 5px;
+    background-color: #333;
+    margin: 0 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #555;
+}
+
+/* Ocultar las flechas pero mantenerlas funcionales */
+.hidden-control {
+    opacity: 0;
+    pointer-events: all; /* Asegura que sean clicables */
+}

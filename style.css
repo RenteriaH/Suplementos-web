@@ -1,0 +1,1372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*------------------------------------Import de archivos---------------------------------------------*/
+/*@import url(owl.carousel.min.css); se tiene que borrar este*/ 
+@import url(carousel.css);
+
+/* ----------------------------Primero trabajaremos en la forma del escritorio ---------------------------*/
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(imagenes/bg.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Estilos para el menú */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea el contenido a la izquierda */
+}
+
+.logo {
+    color: #FFFDFC;
+    font-size: 25px;
+    font-weight: 800;
+   
+    margin-left: -210px; /* Ajusta el valor según lo necesites */
+    border: 5px solid #4b4b4c; /* Borde alrededor del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+}
+/*
+.menu .navbar ul {
+    display: flex;
+}*/
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFDFC;
+    display:block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover { /*Esto es para el color de las letras cuando pones la flecha encima*/
+    color: rgb(0, 162, 255);
+}
+
+/* Ocultar el menú desplegable por defecto en pantallas pequeñas */
+#menu {
+    display: none;
+}
+
+/* Estilos para el icono del menú */
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    text-align: center;
+}
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: #FFFDFC;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    
+}
+
+.header-content p{
+    font-size: 16px;
+    color: #FFFDFC;
+    padding: 0 250px;
+    margin-bottom: 25px;
+    
+}
+
+.btn-1{
+    display: inline-block;/* Para que se comporte como un botón */
+    padding: 11px 35px;
+    background-color: rgb(0, 162, 255);/*Esto es para el color de los botones */
+    color: #FFFDFC;
+    text-transform: uppercase;
+    margin-top: 20px; /* Añade margen superior para separarlo del texto */
+    text-align: center;
+}
+.btn-1:hover{
+    background-color:rgba(23, 111, 184, 0.815);/*Este color es para cuandpo te posiciones por encima del botnon*/
+}
+
+
+
+
+/* Estilos para el perfil */
+.perfil-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.perfil-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.perfil-container p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el círculo flotante */
+.circulo-flotante {
+    position: fixed;
+    top: 20px; /* Ajusta la distancia desde el borde superior */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    width: 60px; /* Tamaño del círculo */
+    height: 60px; /* Tamaño del círculo */
+    border-radius: 50%; /* Para hacerlo redondo */
+    background-color: rgb(17, 1, 77); /* Color de fondo */
+    color: white; /* Color del texto */
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    font-size: 30px; /* Tamaño de la letra */
+    font-weight: bold; /* Para que se vea más destacado */
+    z-index: 1000; /* Asegura que el círculo esté por encima de otros elementos */
+    text-decoration: none; /* Eliminar el subrayado del enlace */
+}
+/* Si el usuario es "Invitado", hacer el círculo un poco más grande y con texto personalizado */
+.circulo-flotante.invitado {
+    font-size: 14px;
+    width: auto;
+    padding: 10px;
+}
+
+/* Tabla centrada */
+.perfil-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.perfil-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la tabla */
+.perfil-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.perfil-table th, .perfil-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.perfil-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.perfil-table td {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para el contenedor del perfil */
+.perfil-container {
+    text-align: center;
+    margin: 140px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Círculo con la inicial dentro del cuadro del perfil 
+.circulo-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: green; /* Color del círculo 
+    color: white; /* Color de la inicial 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 auto 20px; /* Centrado y espacio debajo 
+}*/
+
+/* Tabla centrada */
+.perfil-table {
+    width: 100%;
+    margin: 20px  0;
+    border-collapse: collapse;
+}
+
+.perfil-table th, .perfil-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.perfil-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.perfil-table td {
+    background-color: #f9f9f9;
+}
+
+/* Botón de cerrar sesión */
+.btn-cerrar-sesion {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f44336; /* Color rojo */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #d32f2f;
+}
+/* Botón de volver al inicio */
+.btn-volver {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Color azul */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px; /* Espacio entre el botón de cerrar sesión y el botón de volver */
+}
+
+.btn-volver:hover {
+    background-color: #0056b3; /* Color azul oscuro cuando se pasa el mouse */
+}
+
+/*-----------Estilos para el menu de las otras paginas------------------------------*/
+/* Estilos para el menú */
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1E90FF; /* Color azul para el fondo del menú */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;  /* Añadido para asegurarse de que el menú esté por encima de otros elementos */
+
+
+}
+
+.nav-menu {
+    flex-grow: 1; /* Para que el menú ocupe el espacio disponible */
+}
+
+.nav-menu .menu-list {
+    display: flex;
+    justify-content: space-between; /* Alinear los elementos a la derecha */
+    margin: 0; /* Eliminar margen */
+    padding: 0 35.5px 35px 94px; /* Eliminar padding */
+    list-style-type: none; /* Eliminar puntos de la lista */
+}
+
+.nav-menu .menu-list li {
+    margin: 0 0 0 12px; /* Espacio entre los elementos del menú */
+}
+
+.nav-menu .menu-list li a.menu-item {
+    font-size: 18px;
+    
+
+    padding: -12px  10px; /* Espaciado alrededor de los enlaces */
+    color: #FFFDFC;
+    display: block;
+    font-weight: 600;
+    transition: color 0.3s; /* Transición suave para el hover */
+}
+
+.nav-menu .menu-list li a.menu-item:hover {
+    color: rgb(0, 162, 255); /* Color de las letras al pasar el mouse */
+}
+
+/* Ocultar el menú desplegable por defecto en pantallas pequeñas */
+#menu-toggle {
+    display: none;
+}
+
+/* Estilos para el icono del menú */
+.menu-icon {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none; /* Mostrar solo en pantallas pequeñas */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-menu .menu-list {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        display: none; /* Ocultar inicialmente */
+    }
+
+    #menu-toggle:checked + label + .nav-menu .menu-list {
+        display: flex; /* Mostrar menú al hacer clic */
+    }
+
+    .menu-icon {
+        display: block; /* Mostrar el icono del menú */
+    }
+
+    .menu label {
+        display: block; /* Mostrar el label para el menú */
+    }
+}
+/*--------------------------------------Aqui empezamos a trabajar con la siguiente seccion---------------------------------*/
+
+.suplementos{
+    padding:100px 0;
+    background-color: white;/*Esto es para cambiar el color el fondo */
+    position: relative;
+}
+.suplementos-content{
+    text-align: center;
+}
+
+.suplementos-content h2{
+    font-size: 60px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+
+}
+.txt-p{
+    font-size: 25px;
+    color: #414147;
+    text-align: center;
+    padding: 0 200px;
+    margin-bottom: 35px;
+}
+
+.suplementos-group{
+    display: flex;/*Para que los elementos se coloquen delante de cada uno */
+    justify-content: space-between; /*Para que los elemntos tengan la misma separacion */
+    margin-bottom: 60px;/*Separacion hacia abajo */
+    
+}
+
+.suplementos-1{
+    padding: 0 25px;
+    
+}
+
+.suplementos-1 img{
+    width: 200px;
+
+}
+
+.suplementos-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.suplementos-1 h3{
+    color: #323337;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/*Estos son los suplementos de la paginad e suplementos el edit*/
+.suplemento-item {
+    width: 23%; /* 4 elementos por fila */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: space-between;
+}
+
+.suplemento-item img {
+    max-width: 100%; /* Ajusta el tamaño de la imagen */
+    border-radius: 8px;
+    margin: 0 auto; /* Centra la imagen */
+}
+
+.suplemento-item h3 {
+    margin-top: 20px; /* Aumenta el espacio entre el título y el elemento superior */
+    font-size: 18px;
+    text-align: center;
+}
+.suplemento-item p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px; /* Espacio entre el precio y el nombre del producto */
+    text-align: center;
+}
+
+/* Estilo para el botón "Agregar al carrito" */
+.add-to-cart {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: rgb(0, 162, 255);
+    color: #FFFDFC;
+    text-transform: uppercase;
+    margin-top: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: rgba(23, 111, 184, 0.815);
+}
+/*Boron para eliminar productos de mi carrito */
+button.eliminar {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button.eliminar:hover {
+    background-color: darkred;
+}
+
+.imagen-producto {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/*
+.listaSuplementos{c
+    text-align: center;
+    list-style: circle;
+    justify-content: space-between; /*Para que los elemntos tengan la misma separacion */
+
+
+/*--------------------Aqui empiezan a modificar la siguiente seccion--------------------*/
+
+.services{
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(imagenes/bg2.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;/*Este es el efecto que se le da a la imagen*/
+    padding: 100px 60px;
+}
+
+.services-content{
+    text-align: center;
+}
+
+.services-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services-content p{
+    font-size: 16px;
+    color: #C5C5C5;
+    margin-bottom: 50px;
+    padding: 0 100px;
+
+
+}
+
+.services-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+}
+
+.services-1{
+    padding: 0 100px;
+}
+
+.services-1 img{
+    width: 70px;
+    margin-bottom: 15px;
+}
+
+.services-1 h3{
+    color: #EACCB3;
+    font-size: 18px;
+}
+
+/*--------------------Siguiente seccion-------------------------------*/
+
+.general{
+    display: flex;
+}
+
+.general-1{
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: #E1E2E6;
+
+}
+
+.general-2{
+    background-image: url(imagenes/Pre\ Entreno\ Dragon\ Pharma\ Venom\ Inferno\ 40\ Servs\ Extremo\ Sabor\ Dragons\ Blood_2.webp);
+    background-position:  center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+.general-3{
+    background-image: url(imagenes/Zombie\ Pre\ Entreno\ Extremo\ \(algodon\ De\ Azúcar\)_3.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+.general-2, .general-3 {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain; /* Cambiado a "contain" para que la imagen se ajuste sin recorte */
+    width: 50%; /* Mantén el 50% si quieres que ocupe la mitad del espacio */
+    height: 750px; /* Ajusta la altura si es necesario */
+   
+}
+
+
+.contenedor {
+    max-width: 1200px; /* Aumenta el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding-left: 120px;  /* Ajusta los márgenes laterales para más espacio */
+    padding-right: 120px;
+}
+/*--------Aqui modificamos los h---------*/
+h2{
+    font-size: 55px;
+    
+    line-height: 50px;
+    color: #323337;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    max-width: 100%; /* Asegura que el título use el ancho disponible */
+    padding-left: 0;  /* Ajusta el padding para mayor espacio */
+    padding-right: 0;
+}
+
+p{
+    font-size: 16px;
+    text-align: justify;
+    color: #414147;
+    margin: 20px 0 45px 0;
+    max-width: 100%; /* Permite que el párrafo use todo el ancho disponible */
+    padding-left: 0;  /* Ajusta el padding para darle más ancho */
+    padding-right: 0;
+}
+
+
+/*-----------------------------------------Seccion de blog----------------------------------*/
+.blog{
+    padding: 100px 0 ;
+    text-align: center;
+}
+
+.blog-content{
+    display: flex;
+    
+    justify-content: space-between;
+
+}
+
+.blog-1{
+    padding: 1px 25px;
+}
+
+.blog-1 img {
+    width: 250px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.blog-1 h3{
+    font-size: 25px;
+    color: #323337;
+}
+/*
+.listaSuplementos{
+    text-align: justify;
+    list-style-type: circle;
+    font-size: 17px; /* Un tamaño un poco más grande *
+    line-height: 1.8; /* Espaciado entre los elementos *
+    padding-left: 0; /* Margen izquierdo para que los círculos no queden pegados al borde *
+    color: #52575c; /* Color ligeramente gris *
+    max-width: 500px; /* Limitar el ancho de la lista para que se vea mejor en pantallas más grandes *
+    margin: 0 auto; /* Centramos la lista *
+}
+*/
+
+.listaSuplementos{
+    text-align: justify;
+    list-style: circle;
+    font-size: 16px;
+    justify-content: space-between; /*Para que los elemntos tengan la misma separacion */
+    margin: 0 auto; /* Centramos la lista */
+    line-height: 1.8; /* Espaciado entre los elementos */
+    color: #52575c; /* Color ligeramente gris */
+}
+
+
+/** Sección de Clientes **/
+
+/* Define el padding para la sección de clientes */
+.clients {
+    padding: 0 0 100px 0;
+    align-items: center;
+}
+
+/* Estilos para el título y subtítulo de la sección */
+.clients .titlepage {
+    text-align: center;
+    padding-bottom: 20px; /* Reducido para acercar el contenido a la sección */
+}
+
+.clients .titlepage h2 {
+    font-size: 55px;
+    margin-bottom: 10px; /* Reducido para acercar el título al párrafo */
+}
+
+.clients .titlepage p {
+    color: #2a2a2c;
+   text-align: center;
+    font-size: 17px;
+    line-height: 29px;
+    margin-top: 5px; /* Reducido para pegar más el párrafo al título */
+    padding-top: 0;  /* Elimina el padding superior */
+}
+
+/* Estilos para los cuadros individuales de clientes */
+.clients_box {
+    border: #606060 solid 1px;
+    padding: 40px 32px 40px 0px;
+    float: left;
+    text-align: left;
+    margin-left: 89px;
+}
+
+/* Estilos para el nombre y texto de los clientes */
+.clients_box h3 {
+    color: #2a2a2c;
+    font-size: 26px;
+    line-height: 30px;
+    padding-top: 23px;
+    font-weight: 600;
+}
+
+.clients_box p {
+    color: #2a2a2c;
+    padding: 0 auto;
+    text-align: justify;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+/* Alineación y márgenes para la imagen del cliente */
+.clients_box figure {
+    margin: 0;
+    float: left;
+    margin-left: -102px;
+    padding-right: 30px;
+}
+
+/* Ajustes para los indicadores del carrusel (los puntos abajo) */
+#myCarousel .carousel-indicators {
+    bottom: -70px;
+}
+
+#myCarousel .carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #111;
+}
+
+#myCarousel .carousel-indicators .active {
+    background: #8c8a8a;
+}
+
+/* Mostrar los controles del carrusel (flechas de izquierda y derecha) */
+#myCarousel .carousel-control-prev,
+#myCarousel .carousel-control-next {
+    display: block;
+}
+
+/* Ajustes para la posición del contenedor del carrusel */
+.clients_Carousel .carousel-caption {
+    position: inherit;
+    padding: 0;
+}
+
+/* Estructura responsiva usando las clases de Bootstrap */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Estructura responsive según el tamaño de pantalla */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Ajustes para las filas y columnas del grid de Bootstrap */
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/** fin de seccion de clientes **/
+
+
+/** contact section */
+
+
+
+.contact {
+    margin-top: 90px; /* Mantén este margen si es necesario para otras secciones */
+}
+
+
+
+.contact .main_form  {
+    color: #4b4b4c;
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    font-weight: 600; /* Cambiado a 600 para una mejor legibilidad */
+    padding: 0 auto;
+    max-width: 600px; /* Establece un ancho máximo para hacer el formulario más pequeño */
+    border: 2px solid #4b4b4c; /* Borde alrededor del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    transform: translateX(-90px); /* Mueve el formulario 20px a la izquierda */
+}
+
+#map {
+    height: 100%;
+   
+    min-height: 732px;
+}
+.main_form {
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+    padding: 40px 50px;
+    margin-top: 107px;
+}
+
+.main_form .contactus {
+    border-bottom: #111111 solid 1px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 57px;
+    background: transparent;
+    color: #4b4b4c;
+    font-size: 18px;
+    font-weight: normal;
+    border-top: inherit;
+    border-left: inherit;
+    border-right: inherit;
+}
+
+.main_form .contactusmess {
+    border-bottom: #111111 solid 1px;
+    margin-bottom: 25px;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 14px;
+    background: transparent;
+    color: #4b4b4c;
+    ;
+    font-size: 18px;
+    font-weight: normal;
+    border-top: inherit;
+    border-left: inherit;
+    border-right: inherit;
+}
+
+
+.send_btn {
+    background: #03cafc;
+    font-weight: 600;
+    font-size: 18px;
+    width: 100%;
+    color: #fff;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: ease-in all 0.5s;
+    text-transform: uppercase;
+}
+
+.send_btn:hover {
+    background: #4b4b4c;
+    transition: ease-in all 0.5s;
+}
+
+#request *::placeholder {
+    color: #4b4b4c;
+    opacity: 1;
+}
+
+/** end contact section **/
+/*---------------Footer parte foinal ------------------------*/
+
+
+.footer {
+    padding: 50px 0;
+    background-color: #252525;
+    color: #F9FAFC;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea todo el contenido al centro */
+}
+
+.footer-content {
+    width: 100%; /* Para asegurar que ocupa todo el ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 30px;
+    color: #F9FAFC;
+    margin-bottom: 10px; /* Ajusta el margen */
+}
+
+/* Centra los ítems y ajusta el espacio entre ellos */
+.link ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Alinea los elementos al centro */
+    gap: 280px; /* Espacio entre los elementos */
+    margin: 30px 0; /* Espaciado alrededor de la lista */
+    transform: translateX(28px); /* Mueve los ítems 20px a la derecha */
+}
+
+.link ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 5px; /* Ajusta el margen inferior */
+}
+
+/* Invertir color de las imágenes para que sean blancas */
+.imagen1 {
+    background-image: url('imagenes/ubicacion.png');
+    filter: invert(100%); /* Cambia la imagen a blanco */
+}
+
+.imagen2 {
+    background-image: url('imagenes/telefono.png');
+    filter: invert(100%); /* Cambia la imagen a blanco */
+}
+
+.imagen3 {
+    background-image: url('imagenes/correo-electronico.png');
+    filter: invert(100%); /* Cambia la imagen a blanco */
+}
+
+/* Estilo de texto debajo de las imágenes */
+.link p {
+    font-size: 16px;
+    color: #C5C5C5;
+}
+
+/* Derechos de autor */
+.copyright {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #F9FAFC;
+    margin-top: 20px; /* Espacio entre el contenido y el copyright */
+   
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    
+}
+
+.copyright p {
+    color: #292929;
+    font-size: 17px;
+    text-align: center;
+}
+
+.copyright a {
+    color: #292929;
+    text-decoration: none;
+}
+.copyright a:hover {
+    color: #03cafc;
+}
+/*----------------Deskstop firs------------------*/
+
+/* Estilos para la sección entre el footer y el menú del admin_dashboard*/
+.admin h1, .admin h2 {
+    font-family: 'Arial', sans-serif;
+    color: #252525;
+    text-align: center;
+    
+}
+
+.admin h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+    
+}
+
+.admin h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.admin form {
+    max-width: 600px;
+    margin:0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.admin form input[type="text"],
+.admin form input[type="number"],
+.admin form input[type="file"],
+.admin form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.admin form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.admin form button:hover {
+    background-color: #45a049;
+}
+
+.admin table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.admin table th, .admin table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.admin table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.admin table td img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.admin table td a {
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin table td a:hover {
+    color: #c9302c;
+}
+
+.admin table input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Estilos para el mensaje de éxito o error */
+.admin p {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.admin p.error {
+    color: #f44336;
+}
+
+.admin p.success {
+    color: #4CAF50;
+}
+
+/* Estilos generales para la sección Acerca de Nosotros */
+
+.about-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    color: #333;
+}
+
+.about-section .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.about-section .section-description {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+
+/*-----------------Aqui toca trabajar la parte movil---------------------------- */
+
+
+
+@media(max-width:991px){
+    .menu{
+        padding: 30px;
+    }
+    menu label{
+        display: initial;
+    }
+    
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+
+    }
+
+    .menu .navbar ul li{
+        width:100%;
+
+    }
+    
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+    
+
+    .header{
+        min-height: 0vh;
+    }
+    .header-content{
+        padding: 100px 30px;
+    }
+    .header-content p{
+        padding: 0;
+    }
+    
+    /*-----------------------Suplementos-----------------*/
+    .suplementos{
+        padding:30px;
+    }
+    .suplementos-content h2{
+        padding: 0;
+    }
+    .txt-p{
+        padding: 0;
+    }
+    .suplementos-group{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .suplementos-img{
+        display: none;
+    }
+    
+    /*------------Servicios------------*/
+    .services{
+        padding: 30px;
+    }
+    .services-content p{
+        padding: 0;
+    }
+    .services-group{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .services-1{
+        margin-bottom: 25px;
+    }
+
+    /*-------------Siguiente seccion-----------------*/
+    .general{
+        flex-direction: column;
+
+    }
+    .general-1{
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+    .general-2,.general-3{
+        display: none;
+    }
+
+    /*-------------------Seguimos con el blog------------------*/
+    .blog{
+     padding: 30px;    
+    }
+    .blog-content{
+        flex-direction: column;
+    }
+    .blog-1{
+        padding: 0;
+    }
+
+    /*--------------------Footer----------------------------*/
+   
+    .footer {
+        padding: 30px 0; /* Reduce el padding en el footer */
+    }
+
+    .footer-content h3 {
+        font-size: 24px; /* Ajusta el tamaño del título */
+    }
+    .link ul {
+        flex-direction: column; /* Coloca los enlaces en columna */
+        gap: 10px; /* Reduce el espacio entre enlaces */
+    }
+    
+}
+
+
+
+
+
+/* Reset de estilos para dispositivos móviles 
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 40px; /* Ajusta el tamaño del encabezado 
+        line-height: 45px;
+    }
+
+    .header-content p {
+        font-size: 14px; /* Tamaño de texto más pequeño *
+        padding: 0 20px; /* Reduce el padding 
+    }
+
+    .btn-1 {
+        padding: 10px 20px; /* Botón más pequeño *
+        font-size: 14px; /* Ajusta el tamaño del texto del botón *
+    }
+
+    .suplementos-content h2, 
+    .services-content h2, 
+    .blog .titlepage h2,
+    .clients .titlepage h2 {
+        font-size: 30px; /* Tamaño del encabezado reducido *
+        line-height: 35px; /* Ajusta la altura de línea *
+    }
+
+    .suplementos-content p, 
+    .services-content p, 
+    .blog-1 h3,
+    .clients_box p {
+        font-size: 14px; /* Tamaño de texto reducido *
+        padding: 0 20px; /* Reduce el padding *
+    }
+
+    .suplementos-group,
+    .services-group {
+        flex-direction: column; /* Coloca elementos en columnas *
+        align-items: center; /* Centra los elementos *
+    }
+
+    .suplementos-1, 
+    .services-1 {
+        margin-bottom: 20px; /* Espacio entre elementos *
+    }
+
+    .general {
+        flex-direction: column; /* Coloca las secciones en columnas *
+    }
+
+    .general-1, .general-2, .general-3 {
+        width: 100%; /* Ocupa el 100% del ancho *
+        padding: 20px; /* Padding reducido *
+        height: auto; /* Altura automática *
+    }
+
+    .blog-content {
+        flex-direction: column; /* Coloca los blogs en columnas *
+    }
+
+    .clients_box {
+        width: 90%; /* Asegura que el cuadro del cliente ocupe el 90% *
+        margin: 0 auto; /* Centra el cuadro *
+        margin-bottom: 20px; /* Espacio entre cuadros *
+    }
+
+    .contact .main_form {
+        padding: 20px; /* Reduce el padding del formulario *
+    }
+
+    .main_form {
+        margin-top: 30px; /* Ajusta el margen superior *
+    }
+
+    .footer {
+        padding: 30px 0; /* Reduce el padding en el footer *
+    }
+
+    .footer-content h3 {
+        font-size: 24px; /* Ajusta el tamaño del título *
+    }
+
+    .link ul {
+        flex-direction: column; /* Coloca los enlaces en columna *
+        gap: 10px; /* Reduce el espacio entre enlaces *
+    }
+
+    /* Ocultar imágenes de fondo o ajustar su tamaño si es necesario *
+    .general-2, .general-3 {
+        background-size: cover; /* Asegura que las imágenes se cubran adecuadamente *
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas *
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 30px; /* Ajuste adicional para pantallas pequeñas *
+    }
+
+    .suplementos-content h2, 
+    .services-content h2 {
+        font-size: 24px; /* Ajuste adicional para pantallas pequeñas *
+    }
+
+    .btn-1 {
+        padding: 8px 15px; /* Tamaño de botón más pequeño *
+        font-size: 12px; /* Ajuste adicional para el tamaño del texto del botón *
+    }
+}
